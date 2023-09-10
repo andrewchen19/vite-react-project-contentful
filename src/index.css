@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adding component classes */
+@layer components {
+  .align-element {
+    @apply mx-auto w-[90vw] lg:w-[95vw] max-w-7xl px-8;
+  }
+}
