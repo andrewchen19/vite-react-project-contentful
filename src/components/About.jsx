@@ -11,7 +11,7 @@ const About = () => {
         <article>
           <SectionTitle text="about me" />
           <p className="text-gray-700 mt-8 tracking-wide leading-7">
-            Welcome to my portfolio website 🖐🏽
+            Welcome to my portfolio website 😎
             <br />
             Explore a collection of my projects and discover my skills in web
             development and design. Get a glimpse of my creative journey and
