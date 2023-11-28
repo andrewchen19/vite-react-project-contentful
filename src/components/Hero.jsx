@@ -1,36 +1,33 @@
 import heroIMG from "../assets/heroIMG.svg";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { websites } from "../data";
 
 const Hero = () => {
   return (
-    <section className="py-24 bg-japandi-green-light">
+    <section className="py-24 bg-japan-green">
       <div className="align-element grid items-center md:grid-cols-[2fr,1fr] md:gap-2 lg:grid-cols-2 lg:gap-0 ">
         {/* info */}
         <article className="md:text-center">
-          <h2 className="text-6xl font-bold tracking-wider lg:tracking-widest">
-            I'm Andrew
+          <h2 className="font-palanquin text-6xl font-bold tracking-wide">
+            Andrew Chen
           </h2>
-          <p className="mt-4 text-3xl text-slate-700 tracking-wide">
-            Front-End Developer
-          </p>
-          <p className="mt-2 text-lg text-slate-700 tracking-wide capitalize">
+          <p className="mt-10 text-3xl tracking-wide">Front-End Developer</p>
+          <p className="mt-2 font-montserrat text-gray-700 text-lg text-slate-gray tracking-wide capitalize">
             turning ideas into interactive reality
           </p>
           <div className="mt-4 flex gap-x-4 md:justify-center">
-            <a
-              href="https://github.com/andrewchen19"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaGithubSquare className="h-6 w-6 lg:h-8 lg:w-8 text-gray-600 hover:text-purple duration-300" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/andrewchen1119/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaLinkedin className="h-6 w-6 lg:h-8 lg:w-8 text-gray-600 hover:text-purple duration-300" />
-            </a>
+            {websites.map((web) => {
+              const { id, URL, icon } = web;
+              return (
+                <a
+                  key={id}
+                  href={URL}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {icon}
+                </a>
+              );
+            })}
           </div>
         </article>
 

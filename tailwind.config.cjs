@@ -1,46 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+
+// create own custom theme
+const colors = require("tailwindcss/colors");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      black: "#222",
-      white: "#fff",
-      purple: "#9778ff",
-      danger: "#f33950",
-      information: "#35c4fc",
-      success: "#75d00f",
-      warning: "#ffb70a",
-      "japandi-black": "#241f19",
-      "japandi-blue": "#9eadb4",
-      "japandi-brown-dark": "#523d35",
-      "japandi-brown-light": "#bba58f",
-      "japandi-gray-dark": "#5a5a5a",
-      "japandi-gray-light": "#807f7a",
-      "japandi-green-dark": "#223030",
-      "japandi-green-light": "#a9b2a1",
-      "japandi-nude": "#e7d9c9",
-      "japandi-orange": "#d0864a",
-      "gray-50": "#f9fafb",
-      "gray-100": "#f3f4f6",
-      "gray-200": "#e5e7eb",
-      "gray-300": "#d1d5db",
-      "gray-400": "#9ca3af",
-      "gray-500": "#6b7280",
-      "gray-600": "#4b5563",
-      "gray-700": "#374151",
-      "gray-800": "#1f2937",
-      "gray-900": "#111827",
-      "primary-100": "#79a0be",
-      "primary-200": "#6290b3",
-      "primary-300": "#4c81a9",
-      "primary-400": "#35719e",
-      "primary-500": "#1f6193",
-      "primary-600": "#1c5784",
-      "primary-700": "#194e76",
-      "primary-800": "#164467",
-      "primary-900": "#133a58",
+    extend: {
+      fontFamily: {
+        palanquin: ["Palanquin", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      colors: {
+        primary: { ...colors.sky, DEFAULT: colors.sky[700] },
+        secondary: { ...colors.violet, DEFAULT: colors.violet[500] },
+        accent: { ...colors.rose, DEFAULT: colors.rose[500] },
+        "japan-black": "#241f19",
+        "japan-green": "#959d90",
+        "japan-nude": "#e7d7c9",
+      },
     },
-    extend: {},
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };

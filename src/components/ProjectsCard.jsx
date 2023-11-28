@@ -12,7 +12,7 @@ const ProjectsCard = ({ image, url, title }) => {
         alt={title}
         className="h-[15rem] w-full object-cover object-center rounded-t-lg"
       />
-      <h5 className="rounded-b-lg bg-white p-4 text-center capitalize tracking-wider font-semibold text-primary-700 ">
+      <h5 className="rounded-b-lg bg-white p-4 text-center capitalize tracking-wider font-palanquin font-semibold text-primary">
         {title}
       </h5>
     </a>

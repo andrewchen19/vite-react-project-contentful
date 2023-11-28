@@ -11,9 +11,13 @@ const Skills = () => {
             const { id, icon, title, text } = skill;
             return (
               <article key={id}>
-                <span className="text-primary-300">{icon}</span>
-                <h4 className="mt-4 tracking-wider font-bold">{title}</h4>
-                <p className="mt-2 leading-7 text-gray-500">{text}</p>
+                <span>{icon}</span>
+                <h4 className="mt-4 font-palanquin text-xl tracking-wider font-bold">
+                  {title}
+                </h4>
+                <p className="mt-2 font-montserrat leading-7 text-gray-500">
+                  {text}
+                </p>
               </article>
             );
           })}
