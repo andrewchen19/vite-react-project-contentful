@@ -17,7 +17,7 @@ const About = () => {
             Explore a collection of my projects and discover my skills in web
             development and design. Get a glimpse of my creative journey and
             passion for creating impactful digital experiences. Join me to
-            explore the world of technology and creativity!
+            explore the world of technology and creativity
           </p>
         </article>
       </div>
